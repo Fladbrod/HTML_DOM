@@ -23,5 +23,22 @@
     <a href="Collections.html">Collections</a>
     <a href="Node_Lists.html">Node Lists</a>
 </div>
+
+<div class="center">
+    <h1><a href="https://www.w3schools.com/js/js_htmldom_nodes.asp">Nodes</a></h1>
+
+    <p id="p1">This is a paragraph.</p>
+    <p id="p2">This is another paragraph.</p>
+
+    <button onclick="myFunction()">Remove Element</button>
+</div>
+
+<script>
+
+    // Finds elements to remove, and executes it with elmt.remove()
+    function myFunction() {
+        document.getElementById("p1").remove();
+    }
+</script>
 </body>
 </html>

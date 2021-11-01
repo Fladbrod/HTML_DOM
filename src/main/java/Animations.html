@@ -23,5 +23,44 @@
     <a href="Collections.html">Collections</a>
     <a href="Node_Lists.html">Node Lists</a>
 </div>
+
+<div class="center">
+    <h1><a href="https://www.w3schools.com/js/js_htmldom_animate.asp">Animations</a></h1>
+
+    <p>
+        <button onclick="myMove()">Click Me</button>
+    </p>
+    <p>Be warned: Moves extremely slow</p>
+
+    <div id="container">
+        <div id="animate"></div>
+    </div>
+</div>
+<script>
+    // JavaScript animations are done by programming gradual changes in an element's style.
+    //
+    // The changes are called by a timer. When the timer interval is small, the animation looks continuous.
+    //
+    //     The basic code is:
+    function myMove() {
+        let id = null;
+        const elem = document.getElementById("animate");
+        let pos = 0;
+        clearInterval(id);
+        id = setInterval(frame, 900);
+
+        function frame() {
+            if (pos == 350) {
+                clearInterval(id);
+            } else {
+                pos++;
+                elem.style.top = pos + "px";
+                elem.style.left = pos + "px";
+            }
+        }
+    }
+</script>
+
+
 </body>
 </html>

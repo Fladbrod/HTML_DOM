@@ -4,6 +4,28 @@
     <meta charset="UTF-8">
     <title>Forms</title>
     <link rel="stylesheet" type="text/css" href="/styles.css">
+
+    <script>
+        function validateForm() {
+            let x = document.forms["myForm"]["fname"].value;
+            if (x == "") {
+                alert("Name must be filled out");
+                return false;
+            }
+        }
+        function myFunction() {
+            // Get the value of the input field with id="numb"
+            let x = document.getElementById("numb").value;
+            // If x is Not a Number or less than one or greater than 10
+            let text;
+            if (isNaN(x) || x < 1 || x > 10) {
+                text = "Input not valid";
+            } else {
+                text = "Input OK";
+            }
+            document.getElementById("demo").innerHTML = text;
+        }
+    </script>
 </head>
 <body>
 
@@ -22,7 +44,34 @@
     <a href="Nodes.html">Nodes</a>
     <a href="Collections.html">Collections</a>
     <a href="Node_Lists.html">Node Lists</a>
-
 </div>
+
+<div class="center">
+    <h1> <a href="https://www.w3schools.com/js/js_validation.asp">JavaScript Validation</a></h1>
+    <p>Makes a pop up if name is not filled in</p>
+
+<form name="myForm" action="/action_page.php" onsubmit="return validateForm()" method="post">
+    Name: <input type="text" name="fname">
+    <input type="submit" value="Submit">
+</form>
+ <br>
+    <p>Please input a number between 1 and 10: </p>
+
+    <input id="numb">
+
+    <button type="button" onclick="myFunction()">Submit</button>
+
+    <p id="demo"></p>
+    <br>
+    <p><b>Browser validation</b></p>
+    <form action="/action_page.php" method="post">
+        <input type="text" name="fname" required>
+        <input type="submit" value="Submit">
+    </form>
+
+    <p>If you click submit, without filling out the text field,
+        your browser will display an error message.</p>
+</div>
+
 </body>
 </html>

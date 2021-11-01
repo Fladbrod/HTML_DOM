@@ -1,3 +1,4 @@
+/*top menu*/
 .topmenu {
     background-color: #485460;
     display: flex;
@@ -30,7 +31,30 @@
     color: white;
 }
 
-p {
-    padding: 100px;
+/*How to center a div.jpeg*/
+.center {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50% , -50%);
+}
+/*All animations should be relative to a container element.*/
+/*Anmimations*/
+ #container {
+     width: 400px;
+     height: 400px;
+     position: relative;
+     background: #485460;
+ }
+#animate {
+    width: 50px;
+    height: 50px;
+    position: absolute;
+    background-color: orange;
+}
+
+/*More centering ye?*/
+h1 {
     text-align: center;
+
 }

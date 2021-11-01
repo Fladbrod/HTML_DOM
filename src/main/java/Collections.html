@@ -23,5 +23,26 @@
     <a class="active" href="Collections.html">Collections</a>
     <a href="Node_Lists.html">Node Lists</a>
 </div>
+
+<div class="center">
+    <h1><a href="https://www.w3schools.com/js/js_htmldom_collections.asp">Collections</a></h1>
+
+    <p>Hello World!</p>
+
+    <p>Hello Norway!</p>
+
+    <p>Click the button to change the color of all p elements.</p>
+
+    <button onclick="myFunction()">Try it</button>
+</div>
+
+<script>
+    function myFunction() {
+        const myCollection = document.getElementsByTagName("p");
+            myCollection[0].style.color = "red";
+            myCollection[1].style.color = "blue";
+            myCollection[2].style.color = "purple";
+    }
+</script>
 </body>
 </html>
